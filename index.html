@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        function precios(){
+            var cp1,cp2,cp3,cp4,cp5,ct,vn,des,vt
+            cp1=prompt("digite la cantidad que quiere del producto 1");
+            cp2=prompt("digite la cantidad que quiere del producto 2");
+            cp3=prompt("digite la cantidad que quiere del producto 3");
+            cp4=prompt("digite la cantidad que quiere del producto 4");
+            cp5=prompt("digite la cantidad que quiere del producto 5");
+            vn=(parseInt(cp1) * 3000) + ( parseInt(cp2) * 2000 ) + ( parseInt(cp3) * 1000 ) + ( parseInt(cp4) * 2000 ) + ( parseInt(cp5) * 2500 );
+            ct=(parseInt(cp1) + parseInt(cp2) + parseInt(cp3) + parseInt(cp4) + parseInt(cp5) );
+            if (parseInt(vn) >= 50000) {
+                des= parseInt(vn) * 0.2;
+                alert("el precio total de la compra es de " + vn + " pesos");
+                alert("la cantidad de productos es de " + ct + " aplica para el descuento de 20%");
+                alert("el valor total a pagar con descuento es de " + des + "pesos");
+            }else {
+                alert("el precio total de la compra es de " + vn + "pesos");
+                alert("la cantidad de productos es de " + ct);
+            }
+        }
+    </script>
+    <div>
+        <p>programa para descuento</p>
+        <button onclick="precios()">ingresar</button>
+    </div>
+</body>
+</html>
